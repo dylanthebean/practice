@@ -17,5 +17,24 @@ describe("mapObjectToArray()", () => {
   });
 });
 
+describe("getNewUser()", () => {
+  test("its gets a user", async () => {
+    const user = await getNewUser(1);
+
+    expect(user).toBeTruthy();
+    expect(user.id).toBe(1);
+  });
+
+  test("no user found", async () => {
+    expect.assertions(1);
+
+    try {
+      const user = await getNewUser(999);
+    } catch (e) {
+      expect(e).toBeTruthy();
+    }
+  });
+});
+
 // same values use .toEqual
 // same exact comparison use .toBe
