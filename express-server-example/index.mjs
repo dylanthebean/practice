@@ -25,6 +25,13 @@ app.get("/todo", (req, res) => {
   res.json(database);
 });
 
+app.get("/todo/:id", (req, res) => {
+  const todo = database.find((t) => {
+    return t.id === +req.params.id;
+  });
+  res.json({ data: todo });
+});
+
 app.listen(8000, () => {
   console.log(`Listening on port 8000`);
 });
