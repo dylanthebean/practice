@@ -1,0 +1,143 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu ul li {
+  list-style: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+}
+
+.menu-button {
+  display: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: 65ch;
+  margin-top: 2rem;
+}
+
+/* mobile menu */
+
+.mobile-menu {
+  background-color: white;
+  padding: 2rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: calc(100% - 4rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  z-index: 9999;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.mobile-menu.visible {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+.mobile-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.mobile-menu ul li {
+  float: left;
+  width: 45%;
+  margin: 0 2.5%;
+}
+
+.mobile-menu a {
+  color: #5067bc;
+  display: block;
+  padding: 0.25rem 0;
+  text-decoration: none;
+}
+
+.mobile-menu a:hover {
+  color: #3d4146;
+}
+
+.mobile-menu .menu-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+h6 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+hr {
+  margin: 2rem 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+.active {
+  display: block;
+}
+
+@media screen and (max-width: 900px) {
+  .menu {
+    display: none;
+  }
+
+  .menu-button {
+    display: inline-block;
+  }
+
+  .menu-button .in-mobile {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .logo {
+    transform: scale(0.6);
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mobile-menu ul li {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+}
