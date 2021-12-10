@@ -8,7 +8,19 @@
     <title>Test</title>
 </head>
 
+
 <body>
+
+    <!-- Semantic Structure Elements -->
+    <main>
+        <header></header>
+        <article></article>
+        <section></section>
+        <aside></aside>
+        <footer></footer>
+    </main>
+    <!--  Layout and combine/nest these elements in different ways to give content meaningful structure-->
+
 
     <!-- Definition List -->
     <dl>
@@ -33,21 +45,21 @@
     <!-- Pre keeps white spacing -->
     <pre>
         <code>
-        &lt;ul&gt;
-          &lt;li&gt;flour&lt;/li&gt;
-          &lt;li&gt;sugar&lt;/li&gt;
-          &lt;li&gt;salt&lt;/li&gt;
-        &lt;/ul&gt;
-        
-        
-        ul {
-           color: teal;
-        }
-        li {
-           list-style-type: square;
-        }
+            &lt;ul&gt;
+            &lt;li&gt;flour&lt;/li&gt;
+            &lt;li&gt;sugar&lt;/li&gt;
+            &lt;li&gt;salt&lt;/li&gt;
+            &lt;/ul&gt;
+            
+            
+            ul {
+                color: teal;
+            }
+            li {
+                list-style-type: square;
+            }
         </code>
-        </pre>
+    </pre>
 
     <!-- Don't break names to seperate line -->
     Firstname&nbsp;Secondname
@@ -68,15 +80,15 @@
         <!-- Responsive Images -->
         <picture>
             <source media="(min-width:600px)" srcset="...-320.jpg  320w,
-                            ...-480.jpg  480w, 
-                            ...-720.jpg  720w,
-                            ...-960.jpg  960w, 
-                            ...-1440.jpg 1440w, 
-                            ...-1920.jpg 1920w">
+            ...-480.jpg  480w, 
+            ...-720.jpg  720w,
+            ...-960.jpg  960w, 
+            ...-1440.jpg 1440w, 
+            ...-1920.jpg 1920w">
             <source srcset="...-cropped-320.jpg 320w,
-                            ...-cropped-480.jpg 480w, 
-                            ...-cropped-720.jpg 720w,
-                            ...-cropped-960.jpg 960w">
+            ...-cropped-480.jpg 480w, 
+            ...-cropped-720.jpg 720w,
+            ...-cropped-960.jpg 960w">
             <img src="...-480.jpg" alt="..." height="360px" width="480px">
         </picture>
 
@@ -97,6 +109,138 @@
             <source src="....mp3" type="audio/mpeg">
             Sorry your browser doesn't support audio.
         </audio>
+
+        <!-- Working with video ( Captions & Subtitles )-->
+        <video controls>
+            <source src="...webm" type="video/webm">
+            <source src="...mp4" type="video/mp4">
+
+            <track src="...vtt" kind="captions" label="English" srclang="en" default>
+
+            <track src="spanish.vtt" kind="subtitles" label="Español" srclang="es">
+
+            <track src="chapters.vtt" kind="chapters" label="Chapters" srclang="en">
+
+            <track src="descriptions.vtt" kind="descriptions" label="Descriptions" srclang="en">
+
+            <p>Describe the video if device doesn't support playing this video.</p>
+        </video>
+
+        <!-- Lang Attr - needed for screen readers -->
+        <article lang="en">
+            <h1>Heading</h1>
+            <p>Paragraph...<span lang="es">Español.</span> more text...</p>
+        </article>
+
+        <!--  
+            Dir Attr - specify writing direction
+            <html lang="en-gb" dir="ltr"></html>
+            <html lang="ar" dir="rtl"></html>
+        -->
+
+        <!-- Forms -->
+        <form action="" method="post">
+
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+
+            <label for="">Email</label>
+            <input type="email" name="email" id="email" placeholder="me@example.com">
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+
+            <label for="search">Search</label>
+            <input type="search" name="search" id="search" placeholder="&#128269;">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone">
+
+            <label for="testarea">Text Area</label>
+            <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date">
+
+            <label for="colour">Colour</label>
+            <input type="color" name="colour" id="colour">
+
+            <label for="file">File</label>
+            <input type="file" name="file" id="file" accept="image/*" multiple>
+
+            <label for="checkbox">Checkbox</label>
+            <input type="checkbox" name="checkbox" id="checkbox" value="Checked" checked>
+
+            <label for="selectlist">Choose one</label>
+            <select name="selectlist" id="selectlist">
+                <option value="1">Option one</option>
+                <option value="2">Option two</option>
+                <option value="3">Option three</option>
+            </select>
+
+            <fieldset>
+
+                <legend>Check boxes</legend>
+
+                <label for="checkbox1">Checkbox 1</label>
+                <input type="checkbox" name="checkbox1" id="checkbox1" value="Checked1">
+
+                <label for="checkbox2">Checkbox 2</label>
+                <input type="checkbox" name="checkbox2" id="checkbox2" value="Checked2">
+
+                <label for="checkbox3">Checkbox 3</label>
+                <input type="checkbox" name="checkbox3" id="checkbox3" value="Checked3">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Radio boxes</legend>
+
+                <label for="radio1">radio 1</label>
+                <input type="radio" name="radio" id="radio1" value="Checked1">
+
+                <label for="radio2">radio 2</label>
+                <input type="radio" name="radio" id="radio2" value="Checked2">
+
+                <label for="radio3">radio 3</label>
+                <input type="radio" name="radio" id="radio3" value="Checked3">
+
+            </fieldset>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+
+        <!-- Tables -->
+
+        <table>
+            <tr>
+                <th>Header1</th>
+                <th>Header2</th>
+                <th>Header3</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+
+        </table>
 </body>
 
 </html>
