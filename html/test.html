@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+
+<body>
+
+    <!-- Definition List -->
+    <dl>
+        <dt>term</dt>
+        <dd>definition</dd>
+        <dd>additional definition</dd>
+        <dt>second term</dt>
+        <dd>definition</dd>
+        <dt>third term</dt>
+        <dd>definition</dd>
+    </dl>
+
+    <!-- Block quote / cite -->
+
+    <blockquote>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, saepe!</p>
+        <cite>- Author</cite>
+    </blockquote>
+
+    &lt; H4 &gt;
+
+    <!-- Pre keeps white spacing -->
+    <pre>
+        <code>
+        &lt;ul&gt;
+          &lt;li&gt;flour&lt;/li&gt;
+          &lt;li&gt;sugar&lt;/li&gt;
+          &lt;li&gt;salt&lt;/li&gt;
+        &lt;/ul&gt;
+        
+        
+        ul {
+           color: teal;
+        }
+        li {
+           list-style-type: square;
+        }
+        </code>
+        </pre>
+
+    <!-- Don't break names to seperate line -->
+    Firstname&nbsp;Secondname
+
+    <!--  Aria role example -->
+    <h1 aria-label="describe/what you want read out by screen readers">
+        <div class="class" aria-hidden="true"></div>
+
+        <nav role="navigation" aria-label="main menu"></nav>
+
+        <nav role="breadcrumb">
+            <ol class="breadcrumbs">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Blog</a></li>
+            </ol>
+        </nav>
+
+        <!-- Responsive Images -->
+        <picture>
+            <source media="(min-width:600px)" srcset="...-320.jpg  320w,
+                            ...-480.jpg  480w, 
+                            ...-720.jpg  720w,
+                            ...-960.jpg  960w, 
+                            ...-1440.jpg 1440w, 
+                            ...-1920.jpg 1920w">
+            <source srcset="...-cropped-320.jpg 320w,
+                            ...-cropped-480.jpg 480w, 
+                            ...-cropped-720.jpg 720w,
+                            ...-cropped-960.jpg 960w">
+            <img src="...-480.jpg" alt="..." height="360px" width="480px">
+        </picture>
+
+        <!-- Caption with image -->
+        <figure>
+            <img src="..." width="960" height="720" alt="...">
+
+            <figcaption>Caption about image describes relationship between these elements.</figcaption>
+        </figure>
+
+
+        <!-- Working with audio -->
+
+        <audio controls loop autoplay></audio>
+
+        <audio controls>
+            <source src="....ogg" type="audio/ogg; codec=opus">
+            <source src="....mp3" type="audio/mpeg">
+            Sorry your browser doesn't support audio.
+        </audio>
+</body>
+
+</html>
