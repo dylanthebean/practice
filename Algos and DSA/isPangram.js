@@ -1,6 +1,8 @@
 const abc = "abcdefghijklmnopqrstuvwxyz";
 
+//
 // Method 1
+//
 
 const isPangram = (string) => {
   const newString = string.trim().split(" ").join("").toLowerCase();
@@ -24,7 +26,9 @@ isPangram("The quick Brown fox jumps over the lazy DOG");
 isPangram("abcdefghijklmnopqrstuvwxyz");
 isPangram("abcdefgnopqvwxyzzzzzzzzzzzzzzzzzz");
 
+//
 // Method 2
+//
 
 const isPangram2 = (string) => {
   const processedString = [...new Set(string.toLowerCase().split(" ").join(""))]
@@ -38,7 +42,9 @@ isPangram2("The quick Brown fox jumps over the lazy DOG");
 isPangram2("abcdefghijklmnopqrstuvwxyz");
 isPangram2("abcdefgnopqvwxyzzzzzzzzzzzzzzzzzz");
 
+//
 // Method 3
+//
 
 const isPangram3 = (string) => {
   const regexMatch = new Set(string.toLowerCase().match(/[a-z]/gi));
